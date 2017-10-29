@@ -1,8 +1,8 @@
-\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{letter}
+\documentclass[$if(fontsize)$$fontsize$$else$11pt$endif$,$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{letter}
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
 $else$
-\usepackage{lmodern}
+\usepackage{mathpazo}
 $endif$
 $if(linestretch)$
 \usepackage{setspace}
@@ -54,9 +54,7 @@ $endif$
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-$if(geometry)$
-\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
-$endif$
+\usepackage[$if(geometry)$$for(geometry)$$geometry$$sep$,$endfor$$else$margin=1in$endif$]{geometry}
 \usepackage[unicode=true]{hyperref}
 $if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
@@ -134,7 +132,9 @@ $if(graphics)$
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 $endif$
-$if(links-as-notes)$
+$if(inline-links)$
+% Standard behavior
+$else$
 % Make links footnotes instead of hotlinks:
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}}
 $endif$
@@ -213,7 +213,9 @@ $header-includes$
 $endfor$
 \address{$for(return-address)$$return-address$$sep$\\$endfor$}
 
-$if(blockquote)$
+$if(plainquote)$
+% nuttin, defaults are used
+$else$
 \usepackage{mdframed} % color is loaded by mdframed
 \definecolor{greyborder}{RGB}{221,221,221}
 \definecolor{greytext}{RGB}{119,119,119}
@@ -249,12 +251,8 @@ $endif$
 
 $body$
 
-$if(closing)$
-$if(closing-indentation)$
-\longindentation=$closing-indentation$
-$endif$
-\closing{$closing$}
-$endif$
+\longindentation=$if(closing-indentation)$$closing-indentation$$else$0pt$endif$
+$if(closing)$\closing{$closing$}$endif$
 $if(encl)$
 \encl{$for(encl)$$encl$$sep$\\$endfor$}
 $endif$

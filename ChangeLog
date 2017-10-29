@@ -1,3 +1,45 @@
+2017-10-29  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.2
+
+2017-10-23  Aaron Wolen  <aaron@wolen.com>
+
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Print links
+	as footnotes by default
+	* R/linl.R: Document this
+	* man/linl.Rd: Idem
+
+2017-10-22  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version): Roll minor version and date
+
+	* vignettes/linl.Rmd: More minimal vignette, removed now-default args
+	* docs/vignette.png: Updated screenshot
+
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: More minimal
+	* docs/skeleton.png: Updated screenshot
+
+2017-10-21  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Show installation via drat repo
+
+2017-10-19  Aaron Wolen  <aaron@wolen.com>
+
+	* R/linl.R: Document template variables
+	* man/linl.Rd: Idem
+
+2017-10-19  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Blockquote
+	a default as what was opt-in is now opt-out ("plainquote: true")
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Updated
+
+2017-10-18  Aaron Wolen  <aaron@wolen.com>
+
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Set more
+	default choices: fontsize, font, margins, signature indentation
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Idem
+
 2017-10-17  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Initial CRAN Release 0.0.1

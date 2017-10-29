@@ -21,20 +21,27 @@ rendered pdf on the right:
 
 ![](https://eddelbuettel.github.io/linl/skeleton.png)
 
+Several formatting defaults for font, fontsize, indentation are in use. See `help(linl)` for a 
+complete list and default values.
+
 #### Vignette
 
-The vignette example is a little more featureful and shows how to included a letterhead on-demand,
-as well as a signature.  Both of these are driven by simple YAML headers as seen on the left:
+The vignette example is a little more featureful and shows how to include a letterhead on-demand, a
+signature, and a few formatting settings.  All of these are driven by simple YAML headers as seen on
+the left:
 
 ![](https://eddelbuettel.github.io/linl/vignette.png)
 
+The vignette also contains the few lines of vignette metadata one would exclude from a normal
+letter.
+        
 ### Status
 
-The package is working, but not yet on [CRAN](https://cran.r-project.org/).
+The package is fully working, and on [CRAN](https://cran.r-project.org/).
 
 ### Usage 
 
-Use the standard 
+As the package is on CRAN, you can use the standard 
 
 ```r
 install.packages("linl")
@@ -48,15 +55,23 @@ draft("myletter.Rmd", template="pdf", package="linl", edit=FALSE)
 render("myletter.Rmd")
 ```
 
-to create a first draft of a new `myletter.Rmd`.
+to create a first draft of a new `myletter.Rmd`.        
+
+Interim and test versions may also appear on the [ghrr drat repo](https://ghrr.github.io/drat/) from
+which they can be installed via one additional line as in
+
+```r
+drat:::addRepo("ghrr")     # registers the ghrr drat repo
+install.packages("linl")   # installs linl from ghrr
+```
+
+Once installed, the above code examples should work as expected.
 
 ### Requirements
 
 Beyond the R package dependencies, a working `pandoc` binary is needed. RStudio installs
 its own copy, otherwise do what is needed on your OS (_i.e._, something like `sudo apt-get
 install pandoc pandoc-citeproc`).
-
-The pdf mode should only require a basic LaTeX installation.
 
 ### Authors
 
