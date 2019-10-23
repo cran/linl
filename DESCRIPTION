@@ -1,8 +1,8 @@
 Package: linl
 Type: Package
 Title: 'linl' is not 'Letter'
-Version: 0.0.3
-Date: 2018-12-15
+Version: 0.0.4
+Date: 2019-10-23
 Author: Dirk Eddelbuettel and Aaron Wolen
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: A 'LaTeX' Letter class for 'rmarkdown', using the
@@ -10,10 +10,12 @@ Description: A 'LaTeX' Letter class for 'rmarkdown', using the
 URL: http://dirk.eddelbuettel.com/code/linl.html
 BugReports: https://github.com/eddelbuettel/linl/issues
 Imports: rmarkdown, knitr
+Suggests: testthat, yaml
 VignetteBuilder: knitr
 License: GPL-3
-RoxygenNote: 6.0.1
+Encoding: UTF-8
+RoxygenNote: 6.1.1
 NeedsCompilation: no
-Packaged: 2018-12-15 13:36:36.821707 UTC; edd
+Packaged: 2019-10-23 11:14:35.807084 UTC; edd
 Repository: CRAN
-Date/Publication: 2018-12-15 14:10:03 UTC
+Date/Publication: 2019-10-23 12:40:02 UTC

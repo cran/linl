@@ -1,4 +1,4 @@
-## linl [![Build Status](https://travis-ci.org/eddelbuettel/linl.svg)](https://travis-ci.org/eddelbuettel/linl) [![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html) [![CRAN](http://www.r-pkg.org/badges/version/linl)](https://cran.r-project.org/package=linl) [![Downloads](http://cranlogs.r-pkg.org/badges/linl?color=brightgreen)](http://www.r-pkg.org/pkg/linl)
+## linl [![Build Status](https://travis-ci.org/eddelbuettel/linl.svg)](https://travis-ci.org/eddelbuettel/linl) [![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html) [![CRAN](http://www.r-pkg.org/badges/version/linl)](https://cran.r-project.org/package=linl) [![Dependencies](https://tinyverse.netlify.com/badge/linl)](https://cran.r-project.org/package=linl) [![Downloads](http://cranlogs.r-pkg.org/badges/linl?color=brightgreen)](http://www.r-pkg.org/pkg/linl)
 
 Linl is not Letter: LaTeX Letters from RMarkdown
 
@@ -72,6 +72,12 @@ Once installed, the above code examples should work as expected.
 Beyond the R package dependencies, a working `pandoc` binary is needed. RStudio installs
 its own copy, otherwise do what is needed on your OS (_i.e._, something like `sudo apt-get
 install pandoc pandoc-citeproc`).
+
+### See Also
+
+- [binb](https://github.com/eddelbuettel/binb): Binb is not Beamer: Stylish pdf Presentations from RMarkdown
+- [pinp](https://github.com/eddelbuettel/pinp): Pinp is not PNAS: Snazzy one-or two column short papers or vignettes 
+- [tint](https://github.com/eddelbuettel/tint): tint is not tufte: Beautiful pdf or html handout or writeups
 
 ### Authors
 
