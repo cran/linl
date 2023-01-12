@@ -1,3 +1,51 @@
+2023-01-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Relase 0.0.5
+
+	* README.md: Credit Michael and Iñaki, update two URLs
+
+2023-01-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/linl.R: Removed @seealso avoids a R CMD check warning, removed
+	@inheritedParams as no undocumented parameters left
+	* man/linl.Rd: Regenerated
+
+2023-01-07  Iñaki Ucar  <iucar@fedoraproject.org>
+
+	* DESCRIPTION (RoxygenNote): Update
+	* R/linl.R: Use the bundled copy 'wallpaper.sty' v1.30, and document new
+	options letterhead-x-offset, letterhead-y-offset, letterfoot-x-offset, and
+	letterfoot-y-offset
+	* man/linl.Rd: Regenerate
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Add new options to
+	template file (see above)
+	* inst/rmarkdown/templates/pdf/resources/wallpaper.sty: Add
+	* vignettes/examples/letterfoot.R: Remove margins
+	* vignettes/examples/letterfoot.pdf: Regenerate
+	* vignettes/linl.Rmd: Add demo of new options (see above)
+
+2022-11-06  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml (jobs): Update to actions/checkout@v3
+
+2021-11-10  Dirk Eddelbuettel  <edd@debian.org>
+
+ 	* README.md: Remove Travis badge
+	* .travis.yml: Remove Travis YAML config
+
+2021-04-04  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (URL): Add repo
+
+2020-12-27  Dirk Eddelbuettel  <edd@debian.org>
+
+        * .github/workflows/ci.yaml: Add CI runner using r-ci
+	* README.md: Add new CI badge
+
+2020-04-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Add 'last commit' badge
+
 2019-10-23  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Relase 0.0.4

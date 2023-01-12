@@ -3,7 +3,6 @@
 #' A format suitable for standard letters, along a with a number of
 #' helpful extensions
 #'
-#' @inheritParams rmarkdown::pdf_document
 #' @param ... Additional arguments to \code{rmarkdown::pdf_document}
 #' @param keep_tex A boolean toggle to select whether intermediate
 #' LaTeX files are to be kept, defaults to \code{FALSE}
@@ -34,6 +33,7 @@
 #'   \item{\code{letterhead},\code{letterfoot}}{Image file to be used as header or footer (requires the \href{https://www.ctan.org/pkg/wallpaper}{\code{wallpaper}} package), applied only to the first page.}
 #'   \item{\code{letterhead-side},\code{letterfoot-side}}{Specifies which side of the page the header/footer is aligned to. Must be either \code{L} (left, the default) or \code{R} (right).}
 #'   \item{\code{letterhead-scale},\code{letterfoot-scale}}{Scale the header/footer to fraction of page width or height (depending on the file's aspect ratio).}
+#'   \item{\code{letterhead-x-offset},\code{letterhead-y-offset},\code{letterfoot-x-offset},\code{letterfoot-y-offset}}{How far the image must be placed away from the specified corner (0pt by default).}
 #'   \item{\code{ps}}{Text to be added at the end of the letter as a postscript.}
 #'   \item{\code{return-address}}{Address of the sender: takes a list to allow a multi-line address.}
 #'   \item{\code{signature}}{Image file for a signature.}
@@ -42,8 +42,6 @@
 #'
 #' The vignette source shows several of these options in use.
 #'
-#' @seealso
-#' \code{\link[pinp]{pinp}}
 #' @references
 #' JJ Allaire, R Foundation, Hadley Wickham, Journal of Statistical Software, Yihui Xie, Ramnath
 #' Vaidyanathan, Association for Computing Machinery, Carl Boettiger, Elsevier, Karl Broman,
@@ -68,6 +66,17 @@ linl <- function(..., keep_tex = FALSE) {
     base$knitr$opts_chunk$prompt <- FALSE 	# changed from TRUE
     base$knitr$opts_chunk$comment <- '# '	# default to one hashmark
     base$knitr$opts_chunk$highlight <- TRUE  	# changed as well
+
+    wallpaper_copy <- NULL
+    base$pre_knit <- function(input, ...) {
+        wallpaper <- system.file("rmarkdown", "templates", "pdf", "resources", "wallpaper.sty",
+                                 package="linl")
+        wallpaper_copy <<- file.path(dirname(input), "wallpaper.sty")
+        file.copy(wallpaper, wallpaper_copy)
+    }
+    base$on_exit <- function() {
+        if (!keep_tex) unlink(wallpaper_copy)
+    }
 
     base
 }

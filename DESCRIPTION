@@ -1,21 +1,22 @@
 Package: linl
 Type: Package
 Title: 'linl' is not 'Letter'
-Version: 0.0.4
-Date: 2019-10-23
+Version: 0.0.5
+Date: 2023-01-11
 Author: Dirk Eddelbuettel and Aaron Wolen
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: A 'LaTeX' Letter class for 'rmarkdown', using the
  'pandoc-letter' template adapted for use with 'markdown'.
-URL: http://dirk.eddelbuettel.com/code/linl.html
+URL: https://github.com/eddelbuettel/linl,
+        https://dirk.eddelbuettel.com/code/linl.html
 BugReports: https://github.com/eddelbuettel/linl/issues
 Imports: rmarkdown, knitr
 Suggests: testthat, yaml
 VignetteBuilder: knitr
 License: GPL-3
 Encoding: UTF-8
-RoxygenNote: 6.1.1
+RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2019-10-23 11:14:35.807084 UTC; edd
+Packaged: 2023-01-12 01:33:47 UTC; edd
 Repository: CRAN
-Date/Publication: 2019-10-23 12:40:02 UTC
+Date/Publication: 2023-01-12 03:20:02 UTC
